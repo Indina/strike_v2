@@ -1,0 +1,58 @@
+page-register {
+  ion-content {
+        background-image:url(../assets/images/front2.jpg);
+        overflow-y: hidden !important;
+        overflow-x: hidden !important;
+        background-color: #f8f8f8;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+
+  }
+
+
+  .logo{
+    text-align:center;
+    margin-bottom:120px;
+    img{
+      width: 150px;
+    }
+  }
+
+
+
+ .item-md {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid #fff;
+    padding-left:3px;
+  }
+
+
+  .overlay{
+    padding: 50px;
+    padding-top: 70px;
+    background-color: rgba(128, 125, 114, 0.72);
+
+  }
+
+
+.label-md{
+    color:#fff !important;
+    font-size: 15px;
+  }
+
+
+
+
+.button-md{
+  margin-top:40px;
+  background-color: #b7af90;
+  color:#fff;
+  border-radius: 20px;
+}
+
+
+
+
+}

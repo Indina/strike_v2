@@ -1,0 +1,57 @@
+
+
+
+<splash [splash]="sp.splash"></splash>
+
+<ion-header >
+  <ion-navbar>
+    <ion-title>
+
+  <div style="text-align:center"><img  (click)="profile()"  style="width:40px" src="assets/images/bolt.svg">
+    </div>
+    </ion-title>
+
+
+     <ion-buttons end>
+      <button ion-button icon-only (click)="newStrike()">
+       <img style="width:20px;"src="assets/icon/add.svg">
+      </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
+
+
+
+</ion-header>
+
+<ion-content >
+
+
+  <div padding>
+  <ion-segment [(ngModel)]="pakker">
+    <ion-segment-button class="segment-button segment-activated" value="strikes">
+      Strikes
+    </ion-segment-button>
+
+
+
+    <ion-segment-button value="russ">
+      Russ
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pakker">
+  <ion-list *ngSwitchCase="'russ'">
+    Test
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'strikes'" >
+      <strike-list [strikes]="strikes"></strike-list>
+  </ion-list>
+</div>
+
+
+
+</ion-content>

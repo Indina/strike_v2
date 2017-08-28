@@ -1,0 +1,87 @@
+
+
+    <ion-header >
+  <ion-navbar >
+    <ion-title>
+
+  <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
+    </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+     <ion-content >
+     <ion-card >
+
+
+
+
+  <div style="background-color:#f30648;width:130px;height:40px; border-radius:20px;    position: absolute;
+           top: 38%;
+    left: 65%;">
+    <div style="    position: relative;
+    top: 10px;
+    left: 18px;">
+<ion-avatar item-left>
+      <img style=" border-radius: 0;
+    overflow: hidden;width: 20px; float: left;margin-right: 5px;" src="assets/images/like.svg">
+    </ion-avatar> <span style=" float: left;color: #fff;">  120 points</span>
+</div>
+  </div>
+  <img [src]="strike.img"/>
+
+<div class="image-upload" style="display: inline;">
+    <label for="file-input">
+      <img  style="margin-left:10px; margin-top:20px;width: 70px;height: 115px;margin-right: 13px;
+    padding: 20px;
+    background-color: #e4e4e4;
+    border-radius: 25px;  display: inline;" src="assets/icon/photo-camera.svg"/>
+    </label>
+
+
+    <input id="file-input" type="file"/>
+</div>
+
+
+  <img style=" margin-top:20px;width: 70px;height: 115px;margin-right: 13px;
+
+    border-radius: 25px;  display: inline;" src="assets/images/indinalipp.png"/>
+
+ <img style="   margin-top:20px;border-radius: 25px;    width: 70px;
+    height: auto; display: inline;
+    margin-right: 13px;" src="assets/images/indinalipp.png"/>
+ <img style="  margin-top:20px;border-radius: 25px;    width: 70px;height: auto;
+    margin-right: 13px;display: inline;" src="assets/images/indinalipp.png"/>
+
+  <ion-card-content>
+    <ion-card-title>
+      {{strike.title}}
+      </ion-card-title>
+    <p>
+      {{strike.description}}
+    </p>
+
+
+
+<div> </div>
+
+<h3 style="margin-bottom:10px;margin-top:20px;    font-size: 18px;">Chat</h3>
+ <span style="font-weight: bold;">Indina Smith:</span>
+    <span >Hvordan går det?</span>
+    <br/>
+     <span style="font-weight: bold;">Stephan Pedersen:</span>
+    <span >Nei jeg fikk det ikke til....</span>
+
+
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
+  <ion-footer>
+      <ion-item style="padding-left:0;">
+
+    <ion-input type="text" placeholder="Add a message..." style="padding-left:10px;"></ion-input>
+  </ion-item>
+
+</ion-footer>

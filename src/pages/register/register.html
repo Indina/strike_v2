@@ -1,0 +1,28 @@
+<ion-content>
+  <div class="overlay">
+    <div class="logo">
+       <img  src="assets/images/bolt.svg">
+    </div>
+
+
+ <form #formData='ngForm' (ngSubmit)="register()">
+    <ion-item>
+      <ion-label  floating >E-mail</ion-label>
+      <ion-input required type="text" name="userEmail" [(ngModel)]="user.email" ></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Passord</ion-label>
+      <ion-input  required type="password" name="userPassword" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+
+    <button [disabled]="!formData.valid" ion-button full  >Registrer</button>
+
+</form>
+
+  <button ion-button full (click)="goTologinPage()" >Login</button>
+
+  </div>
+</ion-content>
+

@@ -1,0 +1,24 @@
+page-swipe-strikes {
+
+
+  #card-stack {
+    height:100%;
+     position: relative;
+   }
+
+   #card-stack ion-card {
+     border-radius: 5px;
+     position: absolute;
+     text-align: center;
+     height: 100%;
+   }
+
+   img{
+
+     user-select: none;
+     -moz-user-select: none;
+     -webkit-user-drag: none;
+     -webkit-user-select: none;
+     -ms-user-select: none;
+ }
+}

@@ -1,0 +1,46 @@
+
+
+<ion-card *ngFor="let strike of strikes | async">
+<ion-list>
+  <ion-item-sliding #item>
+
+     <ion-item (click)="goToStrikeDetails(strike)">
+
+       <ion-avatar item-left>
+
+
+     <img style=" border-radius: 0;
+    overflow: hidden;     " [src]="strike.typeImgSrc">
+    </ion-avatar>
+     <p style="position: absolute;right: 15px;">4 days left</p>
+    <h2>{{strike.title}}</h2>
+    <p>From Siripus</p>
+ </ion-item>
+
+ <ion-item-options side="right">
+      <button ion-button (click)="favorite(item)" style="width:60px; background-color:#b30837"><img style="width:30px" src="assets/icon/delete2.svg"> </button>
+      <button ion-button  (click)="share(item)" style="width:60px;background-color: #ffcd00">  <img style="width:30px" src="assets/icon/send.svg">  </button>
+    </ion-item-options>
+
+    </ion-item-sliding>
+</ion-list>
+
+
+</ion-card>
+
+
+
+<!--
+
+<ion-card *ngFor="let strike of strikes | async">
+<ion-item>
+    <ion-avatar item-left>
+      <img style=" border-radius: 0;
+    overflow: hidden;" [src]="strike.typeImgSrc">
+    </ion-avatar>
+      <p style="position: absolute;right: 15px;">4 days left</p>
+    <h2>You have a new strike</h2>
+    <p>From Stephan Pedersen</p>
+  </ion-item>
+</ion-card>
+ -->

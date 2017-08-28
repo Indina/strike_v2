@@ -1,0 +1,105 @@
+<ion-header >
+  <ion-navbar >
+    <ion-title>
+
+  <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
+    </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+<ion-content class="sendto-content" >
+
+<div  class="image-upload" style="display: inline;">
+    <label for="file-input" (click)="selectImage()">
+      <img  style="padding: 20px;
+    background-color: #e4e4e4;
+      display: inline;" id="myimage"
+
+       [src]="img"/>
+    </label>
+    <input *ngIf="cordovaExists"
+               type="hidden"
+               name="image"
+               [(ngModel)]="img">
+
+    <input id="file-input" *ngIf="!cordovaExists" type="file"
+               (change)="fileUpload($event)" />
+</div>
+<ion-list>
+
+<ion-item>
+    <ion-label  floating class="list-header">Tittel</ion-label>
+    <ion-input type="text" [(ngModel)]="title" ></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+       <ion-label floating  class="list-header" >Beskrivelse</ion-label>
+    <ion-textarea style="min-height:200px" [(ngModel)]="description"   ></ion-textarea>
+  </ion-item>
+
+
+
+
+<ion-list radio-group [(ngModel)]="selectedStrikeType">
+
+  <ion-list-header class="primary" >
+    Kategori
+  </ion-list-header>
+
+
+  <ion-item  *ngFor="let strikeType of strikeTypes " >
+    <ion-label><img style=" border-radius: 0; overflow: hidden;width:30px ;"  [src]="strikeType.imgSrc"><p class="elementString">{{strikeType.name}}</p></ion-label>
+    <ion-radio  [value]="strikeType"></ion-radio>
+  </ion-item>
+
+
+
+</ion-list>
+
+
+
+
+
+<ion-list radio-group [(ngModel)]="selectedStrikePoint">
+
+  <ion-list-header class="primary" >
+    Poeng
+  </ion-list-header>
+
+
+  <ion-item  *ngFor="let strikePoint of strikePoints " >
+    <ion-label>{{strikePoint.value}}</ion-label>
+    <ion-radio  [value]="strikePoint"></ion-radio>
+  </ion-item>
+
+
+
+</ion-list>
+
+
+
+
+  </ion-list>
+
+
+
+
+
+
+
+
+
+
+
+<div>
+<button ion-button full (click)="save()">Lag ny strike</button>
+</div>
+
+
+</ion-content>
