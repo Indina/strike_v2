@@ -2,30 +2,24 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the SettingsPage page.
+ * Generated class for the ProfileEditPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 
-
+@IonicPage()
 @Component({
-  selector: 'page-settings',
-  templateUrl: 'settings.html',
+  selector: 'page-profile-edit',
+  templateUrl: 'profile-edit.html',
 })
-export class SettingsPage {
+export class ProfileEditPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
-  }
-
-
-
-  save(){
-
+    console.log('ionViewDidLoad ProfileEditPage');
   }
 
 }

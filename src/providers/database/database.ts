@@ -87,7 +87,7 @@ getProfile(userId:string) : FirebaseObjectObservable<Profile>{
 
 createProfile(userId: string, profile : Profile){
   profile.profileId = Uuid.raw();
-  return this._af.object(`profile/${userId}`).set(profile).then().catch(this.onError);
+  return this._af.object(`profiles/${userId}`).set(profile).then().catch(this.onError);
 }
 
 

@@ -39,15 +39,19 @@ export class AuthProvider {
       }).
       catch(
       (err)=>{
-        console.log(err);
-        this.error = err;
-        return err;
+        return this.errorHandle(err);
       });
   }
 
 
-  register(user:User){
-
+  async createUserWithEmailAndPassword(user:User){
+      try {
+        const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email,user.password);
+        console.log(result);
+        return result;
+      } catch (err) {
+        return this.errorHandle(err);
+      }
   }
 
 
@@ -55,4 +59,10 @@ export class AuthProvider {
     this.afAuth.auth.signOut();
   }
 
+
+  errorHandle(err){
+        console.log(err);
+        this.error = err;
+        return err;
+  }
 }

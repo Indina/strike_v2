@@ -31,6 +31,7 @@ import { UserProvider } from '../providers/user/user';
 import { FileProvider } from '../providers/file/file';
 import { PackagesPage } from "../pages/packages/packages";
 import { SwingModule } from 'angular2-swing';
+import { ProfileEditPage } from "../pages/profile-edit/profile-edit";
 
 
 
@@ -57,13 +58,18 @@ export const firebaseConfig = {
     SettingsPage,
     WallPage,
     RegisterPage,
-    PackagesPage
+    PackagesPage,
+    ProfileEditPage
   ],
   imports: [
     BrowserModule,
     ComponentsModule,
     HttpModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      backButtonText:'',
+      backButtonIcon:'ios-arrow-back',
+      iconMode:'md'
+    }),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -83,7 +89,8 @@ export const firebaseConfig = {
     SettingsPage,
     WallPage,
     RegisterPage,
-    PackagesPage
+    PackagesPage,
+    ProfileEditPage
   ],
   providers: [
     StatusBar,

@@ -1,5 +1,85 @@
+
+
+
+
+ <ion-header >
+  <ion-navbar >
+    <ion-title>
+
+  <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
+    </div>
+    </ion-title>
+
+
+
+
+
+  </ion-navbar>
+</ion-header>
+
+
 <ion-content >
 
+<ion-list >
+
+  <ion-list-header class="primary" >
+    Profil
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label><p >Brukernavn</p></ion-label>
+    <ion-label item-right> <p>Indisstyle</p></ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label><p >E-post</p></ion-label>
+    <ion-label item-right> <p>indina@hotmail.no</p></ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label><p >Passord</p></ion-label>
+    <ion-label item-right> <p>Endre</p></ion-label>
+  </ion-item>
+
+
+
+
+  <ion-item>
+
+     <ion-buttons end>
+     <button ion-button  icon-only (click)="save()">
+      <ion-icon name='checkmark'></ion-icon>
+    </button>
+    </ion-buttons>
+ </ion-item>
+
+  <!--  <ion-item>
+     <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+   Test
+  </button>
+  </ion-item> -->
+
+  <!-- <ion-item>
+    <ion-label><img style=" border-radius: 0;
+    overflow: hidden;width:30px "  src="assets/images/elementType/fire.svg"><p class="elementString">Trendy</p></ion-label>
+
+  </ion-item>
+
+  <ion-item>
+    <ion-label><img style=" border-radius: 0;
+    overflow: hidden;width:30px; "  src="assets/images/elementType/creative.svg"><p class="elementString">Selvmestring</p></ion-label>
+
+  </ion-item>
+
+ <ion-item>
+    <ion-label>
+      <img style=" border-radius: 0;
+    overflow: hidden;width:30px ;"  src="assets/images/elementType/toxic.svg"><p class="elementString">Toxic</p></ion-label>
+
+
+  </ion-item> -->
+
+</ion-list>
 
 
 <ion-list  >
@@ -34,54 +114,6 @@
 </ion-list>
 
 
-<ion-list >
-
-  <ion-list-header class="primary" >
-    Kontoinnstillinger
-  </ion-list-header>
-
-  <ion-item>
-    <ion-label><p >Brukernavn</p></ion-label>
-    <ion-label item-right> <p>Indisstyle</p></ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label><p >E-post</p></ion-label>
-    <ion-label item-right> <p>indina@hotmail.no</p></ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label><p >Passord</p></ion-label>
-    <ion-label item-right> <p>Endre</p></ion-label>
-  </ion-item>
-
-   <ion-item>
-     <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-   Test
-  </button>
-  </ion-item>
-
-  <ion-item>
-    <ion-label><img style=" border-radius: 0;
-    overflow: hidden;width:30px "  src="assets/images/elementType/fire.svg"><p class="elementString">Trendy</p></ion-label>
-
-  </ion-item>
-
-  <ion-item>
-    <ion-label><img style=" border-radius: 0;
-    overflow: hidden;width:30px; "  src="assets/images/elementType/creative.svg"><p class="elementString">Selvmestring</p></ion-label>
-
-  </ion-item>
-
- <ion-item>
-    <ion-label>
-      <img style=" border-radius: 0;
-    overflow: hidden;width:30px ;"  src="assets/images/elementType/toxic.svg"><p class="elementString">Toxic</p></ion-label>
-
-
-  </ion-item>
-
-</ion-list>
 
 
 

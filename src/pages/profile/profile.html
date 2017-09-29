@@ -2,7 +2,26 @@
 
 
 
+ <ion-header >
+  <ion-navbar >
+    <ion-title>
 
+  <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
+    </div>
+    </ion-title>
+
+
+     <ion-buttons end>
+      <button ion-button icon-only (click)="goToSettings()">
+       <!-- <img style="width:20px;"src="assets/icon/settings.svg"> -->
+       <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+
+  </ion-navbar>
+</ion-header>
 
 
 
@@ -10,16 +29,13 @@
 
 <div style="background-color: rgba(118, 100, 162, 0.77);;height:100%">
 
-<img style="position: relative;
-    left: 330px;
-    top: 10px;
-    width: 30px;" src="assets/icon/settings.svg "   (click)="goToSettings()">
 
 
 
 
 
-<div style="margin-top:10px;text-align:center;">
+
+<div style="padding:15px;text-align:center;">
 
 
 <img style="border-radius: 50%;width:160px;

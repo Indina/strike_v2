@@ -7,7 +7,6 @@ import { LoginPage } from "../pages/login/login";
 import { AuthProvider } from "../providers/auth/auth";
 import { UserProvider } from "../providers/user/user";
 import { DatabaseProvider } from "../providers/database/database";
-import { FirebaseObjectObservable } from "angularfire2/database";
 
 @Component({
   templateUrl: 'app.html'
@@ -26,9 +25,16 @@ export class MyApp {
 
       statusBar.styleDefault();
       splashScreen.hide();
+
+
       this.authProvider.state.subscribe(
         auth=>{
           if(auth){
+
+
+
+
+
             this.db.getProfile(auth.uid).subscribe(userProfile=>{
               this.userProvider.userId = auth.uid;
               this.userProvider.profile = userProfile;
