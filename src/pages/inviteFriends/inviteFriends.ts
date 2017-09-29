@@ -10,8 +10,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-invite-friends',
-  templateUrl: 'invite-friends.html',
+  selector: 'page-inviteFriends',
+  templateUrl: 'inviteFriends.html',
 })
 export class InviteFriendsPage {
 
