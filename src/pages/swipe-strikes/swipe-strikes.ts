@@ -12,7 +12,7 @@ import {
   SwingStackComponent,
   SwingCardComponent} from 'angular2-swing';
 
-import { InviteFriendsPage } from "../invite-friends/invite-friends";
+import { InviteFriendsPage } from "../inviteFriends/inviteFriends";
 import { DatabaseProvider } from "../../providers/database/database";
 /**
  * Generated class for the SwipeStrikesPage page.
@@ -95,7 +95,7 @@ voteUp(like: boolean) {
   this.cards.pop();
 
   if (like) {
-    this.recentCard = 'You liked: ' ;
+   
   } else {
     this.recentCard = 'You disliked: ' ;
   }

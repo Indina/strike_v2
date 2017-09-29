@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { Camera } from '@ionic-native/camera';
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from "../pages/login/login";
@@ -19,6 +20,7 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { NewStrikePage } from "../pages/new-strike/new-strike";
 import { StrikeDetailsPage } from "../pages/strike-details/strike-details";
+import { InviteFriendsPage } from "../pages/inviteFriends/inviteFriends";
 import { SplashComponent } from "../components/splash/splash";
 import { SwipeStrikesPage } from "../pages/swipe-strikes/swipe-strikes";
 import { ProfilePage } from "../pages/profile/profile";
@@ -56,6 +58,7 @@ export const firebaseConfig = {
     ProfilePage,
     SettingsPage,
     WallPage,
+    InviteFriendsPage,
     RegisterPage,
     PackagesPage
   ],
@@ -78,6 +81,7 @@ export const firebaseConfig = {
     NewStrikePage,
     StrikeDetailsPage,
     SplashComponent,
+    InviteFriendsPage,
     SwipeStrikesPage,
     ProfilePage,
     SettingsPage,
