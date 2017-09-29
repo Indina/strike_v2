@@ -4,4 +4,21 @@ page-my-strikes {
     z-index: 1000;
     right: 10px;
   }
+
+  p {
+    overflow: inherit;
+    font-size: 1.4rem;
+    line-height: normal;
+    text-overflow: inherit;
+    color: #dbdbe0 !important;}
+.item-block {
+    border-bottom: 0 1px 1px rgba(0, 0, 0, 0.3) !important; 
+}
+
+.card-ios {
+    
+     -webkit-box-shadow: none !important;
+     
+     padding-bottom: 10px;}
+
 }

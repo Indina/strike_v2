@@ -95,9 +95,9 @@ voteUp(like: boolean) {
   this.cards.pop();
 
   if (like) {
-   
+  
   } else {
-    this.recentCard = 'You disliked: ' ;
+     this.navCtrl.push(InviteFriendsPage);
   }
 }
 

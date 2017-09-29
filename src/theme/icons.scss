@@ -1,0 +1,74 @@
+@mixin makeIcon($arg, $val) {
+  .ai-#{$arg}:before ,
+  .ion-ios-ai-#{$arg}:before ,
+  .ion-ios-ai-#{$arg}-outline:before ,
+  .ion-md-ai-#{$arg}:before ,
+  .ion-md-ai-#{$arg}-outline:before  {
+    content: $val;
+    font-size: 26px;
+  }
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../assets/fonts/icomoon.eot?as0zhp');
+  src:  url('../assets/fonts/icomoon.eot?as0zhp#iefix') format('embedded-opentype'),
+    url('../assets/fonts/icomoon.ttf?as0zhp') format('truetype'),
+    url('../assets/fonts/icomoon.woff?as0zhp') format('woff'),
+    url('../assets/fonts/icomoon.svg?as0zhp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@include makeIcon(royal-line, '\e900');
+ @include makeIcon(dancer-fill, '\e901');
+ @include makeIcon(brick-wall-fill, '\e902');
+ @include makeIcon(crown-fill, '\e903');
+ @include makeIcon(medal-fill, '\e923'); 
+ @include makeIcon(trophy-line, '\e93a');
+ @include makeIcon(list-fill, '\e978');
+
+
+
+
+
+.ai-royal-line:before {
+  content: "\e900";
+}
+.ai-dancer-fill:before {
+  content: "\e901";
+}
+.ai-brick-wall-fill:before {
+  content: "\e902";
+}
+.ai-crown-fill:before {
+  content: "\e903";
+}
+
+.ai-medal-fill:before {
+  content: "\e923";
+}
+
+.ai-trophy-line:before {
+  content: "\e93a";
+}
+.ai-list-fill:before {
+  content: "\e978";
+}

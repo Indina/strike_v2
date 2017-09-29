@@ -36,6 +36,8 @@ import { SwingModule } from 'angular2-swing';
 
 
 
+
+
 export const firebaseConfig = {
     apiKey: "AIzaSyCQKyGrADrwvWaXsBBqCqcx8DEbrtjhmoA",
     authDomain: "strike-43aa1.firebaseapp.com",
