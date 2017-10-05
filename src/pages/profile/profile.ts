@@ -17,6 +17,10 @@ import { PackagesPage } from "../packages/packages";
   selector: 'page-profile',
   templateUrl: 'profile.html',
 })
+
+
+
+
 export class ProfilePage {
 
   profile : Profile;

@@ -6,6 +6,7 @@ import { ProfilePage } from "../profile/profile";
 import { NewStrikePage } from "../new-strike/new-strike";
 import { SplashProvider } from "../../providers/splash/splash";
 
+
 /**
  * Generated class for the MyStrikesPage page.
  *
@@ -37,12 +38,26 @@ this.navCtrl.push(ProfilePage);
 
 }
 
+
+
 newStrike(){
 this.navCtrl.push(NewStrikePage);
 
 }
 
+shownGroup = null;
 
+
+toggleGroup(group) {
+    if (this.isGroupShown(group)) {
+        this.shownGroup = null;
+    } else {
+        this.shownGroup = group;
+    }
+};
+isGroupShown(group) {
+    return this.shownGroup === group;
+};
 
   ionViewDidLoad() {
 
