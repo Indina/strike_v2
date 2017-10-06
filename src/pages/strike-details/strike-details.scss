@@ -1,3 +1,38 @@
 page-strike-details {
 
+.img-strike{
+    
+    margin-top: 20px;
+    width: 80px !important;
+    height: 130px !important;
+    margin-right: 3px;
+    border-radius: 10px;
+    display: inline;
+}
+.b-img
+{
+width: 100%;
+height:auto;
+
+        filter:blur(5px);
+
+}
+.img-layer{
+position: absolute;
+    background: linear-gradient(rgba(0, 64, 146, 0), rgba(65, 65, 65, 0.28), rgb(43, 43, 43));
+
+
+}
+
+.slide-zoom {
+    text-align: left;
+    display: block;
+    width: 100%;
+}
+.scroll-bar-indicator
+{
+	display: none;
+}
+
+
 }
