@@ -42,7 +42,7 @@ export class SwipeStrikesPage {
 
   constructor(public navCtrl: NavController, db:DatabaseProvider, public http:Http) {
 
-     db.allStrikes().subscribe(items=>{
+     db.getSwipeList().subscribe(items=>{
 
         items.forEach(item=>{
         this.cards.push(item)

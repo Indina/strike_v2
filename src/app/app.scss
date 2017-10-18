@@ -127,7 +127,7 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
 }
 
 .toolbar-background {
-    background: color($colors, primary, base) !important;
+        background: linear-gradient(216deg, #ff8a40, #fd5068, #dc4588);;
 }
 
 .platform-ios .segment-ios .segment-button.segment-activated {

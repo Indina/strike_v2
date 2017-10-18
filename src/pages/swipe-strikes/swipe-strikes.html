@@ -17,30 +17,15 @@
 
 
 
-<ion-content >
+<ion-content style="background: linear-gradient(216deg, #ff8a40, #fd5068, #dc4588);">
 
 
-<div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">
-    <ion-card #mycards1 swing-card *ngFor="let c of cards">
+<div  style="margin:40px" swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">
+    <ion-card #mycards1 swing-card *ngFor="let c of cards" style="    height: 80%;">
       
 
 
-  <div style="background-color: #f30648;
-    width: 130px;
-    height: 40px;
-    border-radius: 20px;
-    position: absolute;
-       top: 55%;
-    left: 57%;">
-    <div style="    position: relative;
-    top: 10px;
-    left: 18px;">
-<ion-avatar item-left>
-      <img style=" border-radius: 0;
-    overflow: hidden;width: 20px; float: left;margin-right: 5px;"  [src]="c.typeImgSrc">
-    </ion-avatar> <span style=" float: left;color: #fff;"> {{ c.points}} points</span>
-</div>
-  </div>
+ 
   <img [src]="c.img"/>
 
   <ion-card-content >
@@ -56,7 +41,22 @@
       3 other friends has resived this challenge
       
     </p>
-
+ <div style="background-color: #f30648;
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-top: 20px;
+    ">
+    <div style="    position: relative;
+    top: 10px;
+    left: 18px;">
+<ion-avatar item-left>
+      <img style=" border-radius: 0;
+    overflow: hidden;width: 20px; float: left;margin-right: 5px;"  [src]="c.typeImgSrc">
+    </ion-avatar> <span style=" float: left;color: #fff;"> {{ c.points}} points</span>
+</div>
+  </div>
 
 
     
@@ -66,7 +66,19 @@
  
      
  
-      <ion-row >
+     
+    </ion-card>
+  </div>
+  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>
+
+
+
+
+
+
+
+
+   <ion-row >
         <ion-col>
           <button ion-button clear small icon-left color="primary" (click)="send()">
             <ion-icon name="thumbs-down"></ion-icon>
@@ -80,7 +92,4 @@
           </button>
         </ion-col>
       </ion-row>
-    </ion-card>
-  </div>
-  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>
 </ion-content>

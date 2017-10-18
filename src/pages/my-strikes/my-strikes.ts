@@ -29,7 +29,7 @@ export class MyStrikesPage {
 
   constructor(public navCtrl: NavController, db:DatabaseProvider,
     sp:SplashProvider) {
-      this.strikes = db.allStrikes();
+      this.strikes = db.allStrikes()
       this.sp = sp;
   }
 

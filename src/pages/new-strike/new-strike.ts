@@ -8,6 +8,7 @@ import { MyStrikesPage } from "../my-strikes/my-strikes";
 import { ImageProvider } from "../../providers/image/image";
 import { FileProvider } from "../../providers/file/file";
 import { PreloaderProvider } from "../../providers/preloader/preloader";
+import { StrikeTypeList } from "../../model/strikeTypeList";
 
 /**
  * Generated class for the NewStrikePage page.
@@ -32,6 +33,9 @@ selectedStrikeType:StrikeType;
 strikePoints:StrikePoint[];
 selectedStrikePoint:StrikePoint;
 
+strikeTypeLists:StrikeTypeList[];
+selectedStrikeTypeList:StrikeTypeList;
+
 title:string;
 description:string;
 img: string = this._dummyImg;
@@ -40,6 +44,7 @@ points:number;
 cordovaExists = false;
 file:any;
 newStrike:Strike;
+typeList:number;
 
 constructor(public navCtrl: NavController,
   public db : DatabaseProvider,
@@ -59,6 +64,9 @@ constructor(public navCtrl: NavController,
 
   this.strikePoints= db.strikePoints();
   this.selectedStrikePoint = this.strikePoints[0];
+  
+  this.strikeTypeLists = db.strikeTypeLists();
+  this.selectedStrikeTypeList = this.strikeTypeLists[0];
 }
 
 
@@ -74,7 +82,7 @@ save(){
   this.newStrike.type = this.selectedStrikeType.name;
   this.newStrike.typeImgSrc = this.selectedStrikeType.imgSrc;
   this.newStrike.points = this.selectedStrikePoint.value;
-
+  this.newStrike.typeList = this.selectedStrikeTypeList.value;
 
   if(this.img!==this._dummyImg){
 
