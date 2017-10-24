@@ -15,9 +15,10 @@ import { PreloaderProvider } from '../providers/preloader/preloader';
 import { ComponentsModule } from "../components/components.module";
 import { TabsComponent } from "../components/tabs/tabs";
 import { HttpModule } from "@angular/http";
-import { AngularFireModule } from "angularfire2/angularfire2";
-import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireModule } from "angularfire2";
+//import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { NewStrikePage } from "../pages/new-strike/new-strike";
 import { StrikeDetailsPage } from "../pages/strike-details/strike-details";
 import { InviteFriendsPage } from "../pages/inviteFriends/inviteFriends";
@@ -75,8 +76,8 @@ export const firebaseConfig = {
       backButtonIcon:'ios-arrow-back',
       iconMode:'md'
     }),
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig,"strike"),
+    AngularFirestoreModule,
     AngularFireAuthModule,
     SwingModule
   ],

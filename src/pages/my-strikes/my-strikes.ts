@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController} from 'ionic-angular';
-import { FirebaseListObservable } from "angularfire2/database";
 import { DatabaseProvider } from "../../providers/database/database";
 import { ProfilePage } from "../profile/profile";
 import { NewStrikePage } from "../new-strike/new-strike";
 import { SplashProvider } from "../../providers/splash/splash";
+import { Observable } from 'rxjs/Observable';
 
 
 /**
@@ -22,7 +22,7 @@ import { SplashProvider } from "../../providers/splash/splash";
 export class MyStrikesPage {
 
   tabBarElement: any;
-  strikes: FirebaseListObservable<any[]>;
+  strikes: Observable<any[]>;
   sp:SplashProvider;
 
   pakker:string ="strikes";
@@ -30,6 +30,9 @@ export class MyStrikesPage {
   constructor(public navCtrl: NavController, db:DatabaseProvider,
     sp:SplashProvider) {
       this.strikes = db.allStrikes()
+      this.strikes.forEach(v=>{
+        v.toString();
+      })
       this.sp = sp;
   }
 

@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import { Strike } from "../../model/strike";
 import { StrikeType } from "../../model/strikeType";
 import { StrikeTypeList } from "../../model/strikeTypeList";
-import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from "angularfire2/database";
+import { AngularFirestore } from 'angularfire2/firestore';
 import { StrikePoint } from "../../model/strikePoint";
 import { Profile } from "../../model/profile";
 import { UserProvider } from "../user/user";
@@ -22,12 +22,12 @@ import { Observable } from "rxjs/Observable";
 @Injectable()
 export class DatabaseProvider {
 
-  private _af : AngularFireDatabase;
+  private _af : AngularFirestore;
   private _strikeTypes: StrikeType[];
- 
 
 
-  constructor(public http: Http, private af:AngularFireDatabase ,
+
+  constructor(public http: Http, private af:AngularFirestore ,
   private userProvider : UserProvider) {
     this._af =af;
     this._strikeTypes =  [
@@ -67,7 +67,7 @@ strikeTypeLists() : StrikeTypeList[]{
   return [
       new StrikeTypeList(1, "russ"),
       new StrikeTypeList(2, "swipe"),
-    
+
   ]
 
 
@@ -79,16 +79,16 @@ saveNewStrike(strike : Strike){
 
 
 
-  let thenable =  this._af.list('/strikes').push(strike);
+  let thenable =  this._af.collection('strikes¨').add(strike);
   thenable.catch(this.onError);
   return thenable;
 
 
 }
 
-allStrikes(userId : number = 0) : FirebaseListObservable<any[]>{
+allStrikes(userId : number = 0) :Observable<any[]>{
 
-    return this._af.list('/strikes');
+    return this._af.collection('strikes¨').valueChanges();
 
 }
 
@@ -100,21 +100,21 @@ getSwipeList() : Observable<any[]>{
 
 
 
-return this._af.list('/strikes').map(s=>s.filter(strike => strike.type_list == "swipe"));
-   
+return this._af.collection('strikes¨',ref => ref.where("listType", "==", "swipe")).valueChanges();
+
 
 }
 
 onError(error : Error){}
 
-getProfile(userId:string) : FirebaseObjectObservable<Profile>{
+getProfile(userId:string) : Observable<Profile>{
   let path = `profiles/${userId}`;
-  return this._af.object(path);
+  return this._af.doc<Profile>(path).valueChanges();
 }
 
 createProfile(userId: string, profile : Profile){
   profile.profileId = Uuid.raw();
-  return this._af.object(`profiles/${userId}`).set(profile).then().catch(this.onError);
+  return this._af.doc<Profile>(`profiles/${userId}`).set(profile).then().catch(this.onError);
 }
 
 

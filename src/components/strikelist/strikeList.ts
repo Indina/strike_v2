@@ -1,7 +1,8 @@
 import { Component , Input} from '@angular/core';
-import {FirebaseListObservable} from 'angularfire2/database';
+import {  AngularFirestoreCollection } from 'angularfire2/firestore';
 import { NavController } from 'ionic-angular';
 import { StrikeDetailsPage } from '../../pages/strike-details/strike-details';
+import { Observable } from 'rxjs/Observable';
 import { Strike } from "../../model/strike";
 
 /**
@@ -19,7 +20,7 @@ export class StrikeListComponent {
 
     text: string;
 
-    @Input() strikes: FirebaseListObservable<any[]>;
+    @Input() strikes: Observable<any[]>;
 
     constructor(public navCtrl: NavController) {}
 
