@@ -64,7 +64,7 @@ constructor(public navCtrl: NavController,
 
   this.strikePoints= db.strikePoints();
   this.selectedStrikePoint = this.strikePoints[0];
-  
+
   this.strikeTypeLists = db.strikeTypeLists();
   this.selectedStrikeTypeList = this.strikeTypeLists[0];
 }
@@ -82,7 +82,7 @@ save(){
   this.newStrike.type = this.selectedStrikeType.name;
   this.newStrike.typeImgSrc = this.selectedStrikeType.imgSrc;
   this.newStrike.points = this.selectedStrikePoint.value;
-  this.newStrike.typeList = this.selectedStrikeTypeList.value;
+  this.newStrike.listType = this.selectedStrikeTypeList.description;
 
   if(this.img!==this._dummyImg){
 

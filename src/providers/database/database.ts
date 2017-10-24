@@ -79,16 +79,25 @@ saveNewStrike(strike : Strike){
 
 
 
-  let thenable =  this._af.collection('strikes¨').add(strike);
+  let thenable =  this._af.collection('strikes¨').add({
+    description:strike.description,
+    title:strike.title,
+    img:strike.img,
+    listType:strike.listType,
+    points:strike.points,
+    type:strike.type,
+    typeImgSrc:strike.typeImgSrc
+
+  });
   thenable.catch(this.onError);
   return thenable;
 
 
 }
 
-allStrikes(userId : number = 0) :Observable<any[]>{
+allStrikes(userId : number = 0) :Observable<Strike[]>{
 
-    return this._af.collection('strikes¨').valueChanges();
+    return this._af.collection<Strike>('strikes¨').valueChanges();
 
 }
 
@@ -96,11 +105,11 @@ allStrikes(userId : number = 0) :Observable<any[]>{
 
 
 
-getSwipeList() : Observable<any[]>{
+getSwipeList() : Observable<Strike[]>{
 
 
 
-return this._af.collection('strikes¨',ref => ref.where("listType", "==", "swipe")).valueChanges();
+return this._af.collection<Strike>('strikes¨',ref => ref.where("listType", "==", "swipe")).valueChanges();
 
 
 }
