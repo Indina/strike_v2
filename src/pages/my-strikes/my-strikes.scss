@@ -5,6 +5,11 @@ page-my-strikes {
     right: 10px;
   }
 
+
+  .label-ios {
+    margin: 19px 8px 19px 0;
+}
+
   p {
     overflow: inherit;
     font-size: 1.4rem;
@@ -19,10 +24,21 @@ page-my-strikes {
     
      -webkit-box-shadow: none !important;
      
-     padding-bottom: 10px;}
+  }
 
 }
+.platform-ios .segment-ios .segment-button.segment-activated {
+    color: #e91e63;
+    background-color: #fff;
+    
+}
 
+.segment-ios .segment-button {
+  border-color: #fff;}
+.segment-ios .segment-button {
+   
+     border-style: solid; 
+   border-color: #fff;}
 
 .russ-img{
 

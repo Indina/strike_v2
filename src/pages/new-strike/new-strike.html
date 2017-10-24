@@ -83,7 +83,21 @@
 </ion-list>
 
 
+<ion-list radio-group [(ngModel)]="selectedStrikeTypeList">
 
+  <ion-list-header class="primary" >
+    ListeType
+  </ion-list-header>
+
+
+  <ion-item  *ngFor="let strikeTypeList of strikeTypeLists " >
+    <ion-label>{{strikeTypeList.description}}</ion-label>
+    <ion-radio  [value]="strikeTypeList"></ion-radio>
+  </ion-item>
+
+
+
+</ion-list>
 
   </ion-list>
 

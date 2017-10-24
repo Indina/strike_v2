@@ -25,59 +25,66 @@
 
 
 
-<ion-content style="background: url(assets/images/background9.jpg);background-color: rgba(128, 125, 114, 0.72)">
-
-<div style="background-color: rgba(118, 100, 162, 0.77);;height:100%">
+<ion-content >
 
 
-
-
+<img style="-webkit-clip-path: polygon(0px 230px,441px 50px,442px 0px,0px 0px);position: absolute;
+    z-index: -99; " src="assets/images/background2.jpg">
 
 
 
-<div style="padding:15px;text-align:center;">
+<img style="border-radius: 50%;width:100px;
+       border: 10px solid #ffffff;
+    position: relative;
+    top: 150px;
+    left: 40px;" src="assets/images/profileimg.jpg">
 
 
-<img style="border-radius: 50%;width:160px;
-    border: 4px solid #ffffff;" src="assets/images/profileimg.jpg">
-
-<h4 style="color:#ffffff;font-weight:100px;">{{profile.firstName}} {{profile.lastName}}</h4>
-<p style="color:#ffffff">120 points</p>
 
 
-<div style="text-align:left;
-    margin-left: 20%;">
+
+<div >
+
+<img style="position: relative;left: 330px; top: 10px; width: 30px"
+src="assets/icon/settings_gray.svg "   (click)="goToSettings()">
+
+<img style="position: relative;left: 230px;top: 37px; width: 30px;"
+src="assets/icon/shopping-cart.svg"   (click)="goToPackages()">
 
 
-    <div style="margin-top:30px;">
-<button ion-button color="light" style="display:inline-block;color: #f74e6e;
-    background-color: #ffffff;
-    font-size: 20px;
-    font-weight: 300;
-    height: 40px;
+
+<div style="margin-top: 120px;
+    padding-left: 45px;">
+
+<h4 >{{profile.firstName}} {{profile.lastName}}</h4>
+<p >120 points</p>
+
+
+<div >
+
+
+    <div style="margin-top:60px;">
+<button ion-button color="light" style="display:inline-block;color: #ffffff;
+    background-color: #f74e6e;font-size: 20px;font-weight: 300;height: 40px;
     width: 40px;">3</button>
-<h2 style="color:#ffffff;display:inline;position: relative;
+<h2 style="display:inline;position: relative;
     top: 10px;left:12px">La deg til</h2>
 </div>
 
 
 
-<h2 style="color:#ffffff;margin-top:15px">
+<h2 style="margin-top:15px">
 <img  style="width:40px;position: relative;
 
 
 
-    top: 12px;margin-right:12px" src="assets/icon/user.svg">   Legg til nye venner</h2>
+    top: 12px;margin-right:12px" src="assets/icon/user_gray.svg">   Legg til nye venner</h2>
 
 
-<h2 style="color:#ffffff;margin-top:20px"><img  style="width:40px;position: relative;
-    top: 12px;margin-right:18px" src="assets/icon/agenda.svg">Mine venner</h2>
+<h2 style="margin-top:20px"><img  style="width:40px;position: relative;
+    top: 12px;margin-right:18px" src="assets/icon/agenda_gray.svg">Mine venner</h2>
 
 
-
-<h2 (click)="goToPackages()" style="color:#ffffff;margin-top:20px"><img  style="width:40px;position: relative;
-    top: 12px;margin-right:18px" src="assets/icon/agenda.svg"
->Kjøp pakker</h2>
 
 </div>
 </div>

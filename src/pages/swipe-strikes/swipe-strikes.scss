@@ -13,6 +13,23 @@ page-swipe-strikes {
      height: 100%;
    }
 
+page-swipe-strikes #card-stack {
+    height: 80%;}
+
+    page-swipe-strikes #card-stack ion-card {
+    
+    height: 80%;
+}
+
+
+
+page-swipe-strikes ion-card {
+    
+    height: 80% !important;
+}
+
+
+
    img{
 
      user-select: none;

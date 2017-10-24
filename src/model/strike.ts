@@ -8,5 +8,6 @@ export class Strike {
     type: string;
     typeImgSrc:string;
     img: string;
+    typeList: number;
 
 }

@@ -3,12 +3,16 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Strike } from "../../model/strike";
 import { StrikeType } from "../../model/strikeType";
+import { StrikeTypeList } from "../../model/strikeTypeList";
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from "angularfire2/database";
 import { StrikePoint } from "../../model/strikePoint";
 import { Profile } from "../../model/profile";
 import { UserProvider } from "../user/user";
 import 'firebase/storage';
-import * as Uuid  from 'uuid-lib'
+import * as Uuid from 'uuid-lib'
+import { Observable } from "rxjs/Observable";
+
+
 /*
   Generated class for the DatabaseProvider provider.
 
@@ -20,6 +24,7 @@ export class DatabaseProvider {
 
   private _af : AngularFireDatabase;
   private _strikeTypes: StrikeType[];
+ 
 
 
   constructor(public http: Http, private af:AngularFireDatabase ,
@@ -57,7 +62,16 @@ strikePoints() : StrikePoint[]{
 
 }
 
+strikeTypeLists() : StrikeTypeList[]{
 
+  return [
+      new StrikeTypeList(1, "russ"),
+      new StrikeTypeList(2, "swipe"),
+    
+  ]
+
+
+}
 
 
 saveNewStrike(strike : Strike){
@@ -75,6 +89,19 @@ saveNewStrike(strike : Strike){
 allStrikes(userId : number = 0) : FirebaseListObservable<any[]>{
 
     return this._af.list('/strikes');
+
+}
+
+
+
+
+
+getSwipeList() : Observable<any[]>{
+
+
+
+return this._af.list('/strikes').map(s=>s.filter(strike => strike.type_list == "swipe"));
+   
 
 }
 
