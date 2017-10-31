@@ -235,6 +235,18 @@ ion-app.md [padding], ion-app.md [padding] .scroll-content {
   z-index: 1000;
 }
 
+
+.tabs-md .tabbar {
+    background: rgba(248, 248, 248, 0);
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color: #ffcd00 !important;
+}
+
+.footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    display:none;
+}
+
 /* @media only screen and (min-width: 1025px) {
      .scroll-content:not(.show-scrollbar) {
          margin-right: -17px;

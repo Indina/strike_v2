@@ -7,6 +7,7 @@ import { SplashProvider } from "../../providers/splash/splash";
 import { Observable } from 'rxjs/Observable';
 
 
+
 /**
  * Generated class for the MyStrikesPage page.
  *
@@ -27,8 +28,23 @@ export class MyStrikesPage {
 
   pakker:string ="strikes";
 
-  constructor(public navCtrl: NavController, db:DatabaseProvider,
+  constructor(public navCtrl:  NavController, db:DatabaseProvider,
     sp:SplashProvider) {
+
+
+
+     db.getRussList().subscribe(items=>{
+
+        items.forEach(item=>{
+    
+ this.strikes = db.allStrikes()
+
+        });
+
+
+      });
+
+
       this.strikes = db.allStrikes()
       this.strikes.forEach(v=>{
         v.toString();

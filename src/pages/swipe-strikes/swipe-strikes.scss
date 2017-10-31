@@ -12,22 +12,38 @@ page-swipe-strikes {
      text-align: center;
      height: 100%;
    }
+   .card-title-md {
+    display: block;
+    font-size: 1.6rem;}
+    .card-md p {
+    margin: 0 0 2px;
+    font-size: 1.3rem;}
+
+
+
+
+.card-title-md {
+    display: block;
+    font-size: 2.0rem;
+    line-height: 1.2;
+    
+    margin: 2px 0;
+    padding: 8px 0;
+    
+
+  
+}
 
 page-swipe-strikes #card-stack {
-    height: 80%;}
+    height: 100%;}
 
-    page-swipe-strikes #card-stack ion-card {
-    
-    height: 80%;
+
+
+
+page-swipe-strikes .card-md p {
+    margin: 0 0 2px;
+    font-size: 1.2rem;
 }
-
-
-
-page-swipe-strikes ion-card {
-    
-    height: 80% !important;
-}
-
 
 
    img{
@@ -38,4 +54,28 @@ page-swipe-strikes ion-card {
      -webkit-user-select: none;
      -ms-user-select: none;
  }
+}
+
+
+page-swipe-strikes .card-md p {
+    margin: 0 0 2px;
+    font-size: 1.25rem;
+}
+
+
+.card-md p {
+    margin: 0 0 2px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #222;
+    text-align: left;
+  
+}
+
+.card-title-md{
+   
+    color: #222;
+    text-align: left;
+  
 }

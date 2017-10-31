@@ -103,7 +103,14 @@ allStrikes(userId : number = 0) :Observable<Strike[]>{
 
 
 
+getRussList() : Observable<Strike[]>{
 
+
+
+return this._af.collection<Strike>('strikes¨',ref => ref.where("listType", "==", "russ")).valueChanges();
+
+
+}
 
 getSwipeList() : Observable<Strike[]>{
 
