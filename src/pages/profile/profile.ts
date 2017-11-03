@@ -4,6 +4,7 @@ import { SettingsPage } from "../settings/settings";
 import { UserProvider } from "../../providers/user/user";
 import { Profile } from "../../model/profile";
 import { PackagesPage } from "../packages/packages";
+import { AddNewFriendPage } from "../add-new-friend/add-new-friend";
 
 /**
  * Generated class for the ProfilePage page.
@@ -36,8 +37,16 @@ export class ProfilePage {
   }
 
 
+
+
+
 goToSettings(){
   this.navCtrl.push(SettingsPage);
+
+}
+
+goToAddNewFriend(){
+  this.navCtrl.push(AddNewFriendPage);
 
 }
 

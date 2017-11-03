@@ -1,6 +1,11 @@
 page-strike-details {
 
-
+.card-md h2 {
+    margin: 2px 0;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #787878;
+}
 
 .img-strike{
     
@@ -16,7 +21,7 @@ page-strike-details {
 width: 100%;
 height:auto;
 
-        filter:blur(5px);
+     
 
 }
 .img-layer{

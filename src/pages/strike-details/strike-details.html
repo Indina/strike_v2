@@ -1,42 +1,21 @@
 
 
-    <ion-header >
-  <ion-navbar >
-    <ion-title>
-
-  <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
-    </div>
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-
-     <ion-content >
+    
+     <ion-content style="background-color: #f0efef;">
      
+<div style="text-align:center"><img  (click)="profile()"  style="width:40px" src="assets/images/bolt.svg">
+    </div>
 
 
+<img style="     width: 40px;
+    position: absolute;
+    top: 220px;
+    left: 10px;" src="assets/icon/info.svg">
 
-<div style="position: absolute;
-    z-index: 2;
-   
-    top: 30px;
-    text-align:center;">
 
-<div ><img style=" width: 120px;
-    height: 120px;
-    border-radius: 60px;display: contents;" [src]="strike.img"/>
-<p style="    margin: 0 0 2px;
-    font-size: 2.0rem;
-    color: #fff;
-    margin-top: 20px;">{{strike.title}}</p>
-    
-   <p style="color: #fff;
-    padding-left: 60px;
-    padding-right: 60px;">{{strike.description}}</p>  
-
-    
-
-  <div style="background-color:#f30648;width:130px;height:40px; border-radius:20px;    ">
+  <div style="background-color:#f30648;width:130px;height:40px; border-radius:20px;       position: absolute;
+    top: 220px;
+    left: 210px; ">
     <div style="    position: relative;
     top: 10px;
     left: 18px;">
@@ -49,23 +28,19 @@
     
     
     
-    </div>
-
-
-</div>
+   
 
 
 
 
-  <div style="background-color: rgba(54, 54, 54, 0.68);
-    position: absolute;
-    width: 100%;
-    height: 360px;
-    z-index: 1;"></div>
+
+
   
-  <img class="b-img" [src]="strike.img"/>
+  <img class="b-img" style="    position: absolute;
+    top: -90px;
+    z-index: -100;"[src]="strike.img"/>
 
-<ion-card >
+<ion-card style="margin-top:230px;">
 <ion-card-content>
 
 
@@ -79,20 +54,27 @@
     </p>
 
 
-
-<div style="  margin-top:40px;  text-align: center;
-    border-bottom: solid 1px gray;"></div>
-
-<h2 style="text-align:center;    text-align: center;
-    position: relative;
-    top: -12px;
-    background-color: #fff;width: 60px;
-    left: 40%;">Venner</h2>
+<p >{{strike.title}}</p>
+    
+   <p>{{strike.description}}</p>  
 
 
-    <ion-scroll scrollX="true" direction="x" style="width:350px; height:200px;white-space: nowrap; height: 180px">
-       
-    <div class="image-upload" style="display: inline;">
+  </ion-card-content>
+</ion-card>
+
+
+
+
+<div style="padding:20px;">
+
+<ion-card style="   border-radius: 10px; margin-bottom: 10px;
+" >
+<ion-list>
+ 
+
+    <ion-item>
+
+ <div class="image-upload" style="display: inline;">
     <label for="file-input" >
       <img  class="img-strike" style="background-color:gray;padding:20px" src="assets/icon/photo-camera.svg"/>
     </label>
@@ -102,140 +84,165 @@
 </div>
 
 
-<div class="img-strike img-layer" > 
+    </ion-item></ion-list></ion-card></div>
 
 
 
-    <p style="    position: absolute;
-    width: 70px;
-        top: 94px;
-    left: 2px;
-    color: #fff;">Indina Smith</p>
+
+
+
+
+
+
+
+
+
+
+<div style="padding:20px;">
+
+<ion-card style="   border-radius: 10px; margin-bottom: 10px;
+" >
+<ion-list>
+ 
+
+    <ion-item>
+
+       <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+   <img style="border-radius: 50%;    width: 40px;
+    height: 40px;margin-top:0px;margin-right:15px;
+      
+   " src="assets/images/profileimg.jpg"/>
+
+    </ion-avatar>
    
-    
-     </div>
-     <img class="img-strike" src="assets/images/indinalipp.png"/>
-     
+    <h2 onclick="goFullscreen('player'); return false">Indina Smith</h2>
+      <img style="    position: absolute;
+    right: 15px;
+ 
+        top: 20px;
+    width: 20px;
+"src="assets/icon/time-left.svg"/>
+
+
+
+    </ion-item>
 
 
 
 
-<div class="img-strike img-layer" > 
+
+</ion-list>
+</ion-card>
 
 
 
-    <p style="    position: absolute;
-    width: 70px;
-        top: 94px;
-    left: 2px;
-    color: #fff;">Indina Smith</p>
+
+
+
+<ion-card style="  border-radius: 10px;  margin-bottom: 10px;
+" >
+<ion-list>
+ 
+
+    <ion-item>
+
+       <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+   <img style="border-radius: 50%;    width: 40px;
+    height: 40px;margin-top:0px;margin-right:15px;
+      
+   " src="assets/images/profileimg.jpg"/>
+
+    </ion-avatar>
    
-    
-     </div>
-     <img class="img-strike" src="assets/images/indinalipp.png"/>
-     
+    <h2 onclick="goFullscreen('player'); return false">Indina Smith</h2>
+      <img style="    position: absolute;
+    right: 15px;
+     top: 20px;
+    width: 20px;
+"src="assets/images/eye.svg"/>
 
 
 
-     
-
-<div class="img-strike img-layer" > 
+    </ion-item>
 
 
 
-    <p style="    position: absolute;
-    width: 70px;
-        top: 94px;
-    left: 2px;
-    color: #fff;">Indina Smith</p>
+
+
+</ion-list>
+</ion-card>
+
+
+
+
+
+<ion-card style="       border-radius: 10px; margin-bottom: 10px;
+" >
+<ion-list>
+ 
+
+    <ion-item>
+
+       <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+   <img style="border-radius: 50%;    width: 40px;
+    height: 40px;margin-top:0px;margin-right:15px;
+      
+   " src="assets/images/profileimg.jpg"/>
+
+    </ion-avatar>
    
-    
-     </div>
-     <img class="img-strike" src="assets/images/indinalipp.png"/>
-     
+    <h2 onclick="goFullscreen('player'); return false">Indina Smith</h2>
+      <img style="    position: absolute;
+    right: 15px;
+ 
+        top: 20px;
+    width: 20px;
+"src="assets/images/eye.svg"/>
 
 
 
-     
-
-<div class="img-strike img-layer" > 
+    </ion-item>
 
 
 
-    <p style="    position: absolute;
-    width: 70px;
-        top: 94px;
-    left: 2px;
-    color: #fff;">Indina Smith</p>
-   
-    
-     </div>
-     <img class="img-strike" src="assets/images/indinalipp.png"/>
-     
+
+
+</ion-list>
+</ion-card>
 
 
 
-     
-
-<div class="img-strike img-layer" > 
 
 
-
-    <p style="    position: absolute;
-    width: 70px;
-        top: 94px;
-    left: 2px;
-    color: #fff;">Indina Smith</p>
-   
-    
-     </div>
-     <img class="img-strike" src="assets/images/indinalipp.png"/>
-     
-
-
-
-     
-
-<div class="img-strike img-layer" > 
-
-
-
-    <p style="    position: absolute;
-    width: 70px;
-        top: 94px;
-    left: 2px;
-    color: #fff;">Indina Smith</p>
-   
-    
-     </div>
-     <img class="img-strike" src="assets/images/indinalipp.png"/>
-     
-
-
-
-     
-
-<div class="img-strike img-layer" > 
-
-
-
-    <p style="    position: absolute;
-    width: 70px;
-        top: 94px;
-    left: 2px;
-    color: #fff;">Indina Smith</p>
-   
-    
-     </div>
-     <img class="img-strike" src="assets/images/indinalipp.png"/>
-     
+</div>
 
 
 
 
 
 
-    </ion-scroll>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -252,14 +259,7 @@
 
 
 
-<div style="  margin-top:40px;  text-align: center;
-    border-bottom: solid 1px gray;"></div>
 
-<h2 style="text-align:center;    text-align: center;
-    position: relative;
-    top: -12px;
-    background-color: #fff;width: 60px;
-    left: 40%;">Chat</h2>
 
 
  <span style="font-weight: bold;">Indina Smith:</span>
@@ -269,8 +269,6 @@
     <span >Nei jeg fikk det ikke til....</span>
 
 
-  </ion-card-content>
-</ion-card>
 
 </ion-content>
   <ion-footer>
