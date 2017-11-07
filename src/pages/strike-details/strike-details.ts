@@ -21,9 +21,9 @@ export class StrikeDetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.strike  = this.navParams.data as Strike;
   }
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StrikeDetailsPage');
   }
-
-}
+ }
