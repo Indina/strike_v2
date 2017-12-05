@@ -15,7 +15,7 @@
 
   <div style="background-color:#f30648;width:130px;height:40px; border-radius:20px;       position: absolute;
     top: 220px;
-    left: 210px; ">
+    right:3% ">
     <div style="    position: relative;
     top: 10px;
     left: 18px;">
@@ -62,40 +62,65 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div style="padding:20px;">
+
+
 
 <ion-card style="   border-radius: 10px; margin-bottom: 10px;
 " >
 <ion-list>
  
 
-    <ion-item>
+    <ion-item style="height:100px;padding:0px">
 
- <div class="image-upload" style="display: inline;">
-    <label for="file-input" >
-      <img  class="img-strike" style="background-color:gray;padding:20px" src="assets/icon/photo-camera.svg"/>
-    </label>
+       <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+   
+ <div class="image-upload" style="display: inline;padding-right: 10px;">
+        <label for="file-input" >
+          <img  class="img-strike" style="border-radius:0px;  height:110px;   padding: 20px;background-color:gray;" src="assets/icon/photo-camera.svg"/>
+        </label>
+    
+    
+        <input id="file-input" type="file"/>
+    </div>
+
+    </ion-avatar>
+   
+    <h2 onclick="goFullscreen('player'); return false">Indina Smith</h2>
+    <h2 onclick="goFullscreen('player'); return false">Sett av: 32 </h2>
+
+      <img style="    position: absolute;
+    right: 15px;
+ 
+        top: 20px;
+    width: 20px;
+"src="assets/icon/time-left.svg"/>
 
 
-    <input id="file-input" type="file"/>
-</div>
 
-
-    </ion-item></ion-list></ion-card></div>
+    </ion-item>
 
 
 
 
 
+</ion-list>
+</ion-card>
 
 
-
-
-
-
-
-
-<div style="padding:20px;">
 
 <ion-card style="   border-radius: 10px; margin-bottom: 10px;
 " >
@@ -209,6 +234,88 @@
 
 
 
+<ion-list-header>
+       Har også deltatt
+      </ion-list-header>
+
+
+
+
+<ion-card style="  border-radius: 10px;  margin-bottom: 10px;
+" >
+<ion-list>
+       
+
+    <ion-item>
+
+       <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+   <img style="border-radius: 50%;    width: 40px;
+    height: 40px;margin-top:0px;margin-right:15px;
+      
+   " src="assets/images/profileimg.jpg"/>
+
+    </ion-avatar>
+   
+    <h2 onclick="goFullscreen('player'); return false">Indina Smith</h2>
+      <img style="    position: absolute;
+    right: 15px;
+     top: 20px;
+    width: 20px;
+"src="assets/images/eye.svg"/>
+
+
+
+    </ion-item>
+
+
+
+
+
+</ion-list>
+</ion-card>
+
+
+
+
+
+<ion-card style="       border-radius: 10px; margin-bottom: 10px;
+" >
+<ion-list>
+ 
+
+    <ion-item>
+
+       <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+   <img style="border-radius: 50%;    width: 40px;
+    height: 40px;margin-top:0px;margin-right:15px;
+      
+   " src="assets/images/profileimg.jpg"/>
+
+    </ion-avatar>
+   
+    <h2 onclick="goFullscreen('player'); return false">Indina Smith</h2>
+      <img style="    position: absolute;
+    right: 15px;
+ 
+        top: 20px;
+    width: 20px;
+"src="assets/images/eye.svg"/>
+
+
+
+    </ion-item>
+
+
+
+
+
+</ion-list>
+</ion-card>
+
+
+
+
+
 
 
 </div>
@@ -252,26 +359,9 @@
 
 
 
-<div> </div>
 
-
-
-
-
-
- <span style="font-weight: bold;">Indina Smith:</span>
-    <span >Hvordan går det?</span>
-    <br/>
-     <span style="font-weight: bold;">Stephan Pedersen:</span>
-    <span >Nei jeg fikk det ikke til....</span>
 
 
 
 </ion-content>
-  <ion-footer>
-      <ion-item style="padding-left:0;">
-
-    <ion-input type="text" placeholder="Add a message..." style="padding-left:10px;"></ion-input>
-  </ion-item>
-
-</ion-footer>
+ 

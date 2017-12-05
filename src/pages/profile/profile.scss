@@ -5,4 +5,22 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     line-height: 1.2;
 }
+
+
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.card-md {
+    margin: 10px;
+    border-radius: 2px;
+    width: calc(100% - 20px);
+    font-size: 1.4rem;
+    background: #fff;
+     -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 }
