@@ -1,4 +1,4 @@
-import { Component, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, QueryList, ViewChild, ViewChildren,AfterViewInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { Http } from '@angular/http';
@@ -7,8 +7,8 @@ import {
   StackConfig,
  /*  Stack,
   Card,
-  ThrowEvent,
-  DragEvent,*/
+  ThrowEvent,*/
+  DragEvent,
   SwingStackComponent,
   SwingCardComponent} from 'angular2-swing';
 
@@ -25,7 +25,7 @@ import { DatabaseProvider } from "../../providers/database/database";
   selector: 'page-swipe-strikes',
   templateUrl: 'swipe-strikes.html',
 })
-export class SwipeStrikesPage {
+export class SwipeStrikesPage implements AfterViewInit {
 
 
   @ViewChild('myswing1') swingStack: SwingStackComponent;
@@ -73,6 +73,19 @@ export class SwipeStrikesPage {
   }
 
 
+
+  ngAfterViewInit() {
+    // Either subscribe in controller or set in HTML
+    this.swingStack.throwin.subscribe((event: DragEvent) => {
+     // event.target.style.background = 'rgba(255,255,255)';
+    });
+
+  }
+
+
+
+
+
 // Called whenever we drag an element
 onItemMove(element, x, y, r) {
   var color = '';
@@ -80,7 +93,10 @@ onItemMove(element, x, y, r) {
   let min = Math.trunc(Math.min(16*16 - abs, 16*16));
   let hexCode = this.decimalToHex(min, 2);
 
-  if (x < 0) {
+  if(x<0.1 && x>-0.1){
+    element.style.background="white";
+  } else
+  if (x < -0.1) {
     color = '#FF' + hexCode + hexCode;
   } else {
     color = '#' + hexCode + 'FF' + hexCode;
@@ -95,7 +111,7 @@ voteUp(like: boolean) {
   this.cards.pop();
 
   if (like) {
-  
+
   } else {
      this.navCtrl.push(InviteFriendsPage);
   }

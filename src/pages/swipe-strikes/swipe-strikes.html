@@ -21,11 +21,11 @@
 
 
 <div  style="margin:40px" swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">
-    <ion-card #mycards1 swing-card *ngFor="let c of cards" style="    height: 90%;">
-      
+    <ion-card #mycards1 swing-card *ngFor="let c of cards" style="height: 90%;">
 
 
- 
+
+
   <img [src]="c.img"/>
   <div style="background-color: #fe7051;
     width: 130px;
@@ -55,17 +55,17 @@
       {{ c.description}}
     </p>
 
-   
- 
 
-    
+
+
+
 
   </ion-card-content>
 
- 
-     
- 
-     
+
+
+
+
     </ion-card>
   </div>
   <p style="text-align: center; width: 100%;">{{ recentCard }}</p>
